@@ -54,6 +54,227 @@ const confirmacaoTotal =
     document.getElementById("confirmacaoTotal");
 
 
+
+    // ======================================================
+// CAMPOS DE ENDEREÇO
+// ======================================================
+
+const campoCEP =
+    document.getElementById("cep");
+
+const campoEndereco =
+    document.getElementById("endereco");
+
+const campoNumero =
+    document.getElementById("numero");
+
+const campoBairro =
+    document.getElementById("bairro");
+
+const campoComplemento =
+    document.getElementById("complemento");
+
+const campoCidade =
+    document.getElementById("cidade");
+
+const campoEstado =
+    document.getElementById("estado");
+
+const confirmacaoEndereco =
+    document.getElementById("confirmacaoEndereco");
+
+
+    // ======================================================
+// BUSCAR ENDEREÇO PELO CEP
+// ======================================================
+
+async function buscarCEP() {
+
+    if (!campoCEP) {
+        return;
+    }
+
+
+    const cep =
+        campoCEP.value
+            .replace(/\D/g, "");
+
+
+    // --------------------------------------------------
+    // VERIFICAR CEP
+    // --------------------------------------------------
+
+    if (cep.length !== 8) {
+        return;
+    }
+
+
+    // --------------------------------------------------
+    // AVISO VISUAL
+    // --------------------------------------------------
+
+    campoEndereco.value =
+        "Buscando endereço...";
+
+
+    try {
+
+        const resposta =
+            await fetch(
+                `https://viacep.com.br/ws/${cep}/json/`
+            );
+
+
+        if (!resposta.ok) {
+
+            throw new Error(
+                "Erro ao consultar CEP"
+            );
+
+        }
+
+
+        const dados =
+            await resposta.json();
+
+
+        // --------------------------------------------------
+        // CEP NÃO ENCONTRADO
+        // --------------------------------------------------
+
+        if (dados.erro) {
+
+            alert(
+                "CEP não encontrado. Verifique o número."
+            );
+
+
+            limparEndereco();
+
+            campoCEP.focus();
+
+            return;
+
+        }
+
+
+        // --------------------------------------------------
+        // PREENCHER CAMPOS
+        // --------------------------------------------------
+
+        campoEndereco.value =
+            dados.logradouro || "";
+
+
+        campoBairro.value =
+            dados.bairro || "";
+
+
+        campoCidade.value =
+            dados.localidade || "";
+
+
+        campoEstado.value =
+            dados.uf || "";
+
+
+            // ======================================================
+// MÁSCARA DO CEP
+// ======================================================
+
+if (campoCEP) {
+
+    campoCEP.addEventListener(
+        "input",
+        function() {
+
+            let valor =
+                this.value.replace(
+                    /\D/g,
+                    ""
+                );
+
+
+            if (valor.length > 8) {
+
+                valor =
+                    valor.substring(
+                        0,
+                        8
+                    );
+
+            }
+
+
+            if (valor.length > 5) {
+
+                valor =
+                    valor.replace(
+                        /^(\d{5})(\d)/,
+                        "$1-$2"
+                    );
+
+            }
+
+
+            this.value =
+                valor;
+
+        }
+    );
+
+
+    campoCEP.addEventListener(
+        "blur",
+        buscarCEP
+    );
+
+}
+
+
+// ======================================================
+// LIMPAR ENDEREÇO
+// ======================================================
+
+function limparEndereco() {
+
+    campoEndereco.value = "";
+    campoBairro.value = "";
+    campoCidade.value = "";
+    campoEstado.value = "";
+
+}
+
+
+        
+        // --------------------------------------------------
+        // FOCO NO NÚMERO
+        // --------------------------------------------------
+
+        campoNumero.focus();
+
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao buscar CEP:",
+            erro
+        );
+
+
+        limparEndereco();
+
+
+        alert(
+            "Não foi possível consultar o CEP. Verifique sua conexão e tente novamente."
+        );
+
+    }
+
+}
+
+
+
 // ======================================================
 // FORMATAÇÃO DE PREÇO
 // ======================================================
@@ -690,6 +911,48 @@ function abrirModal() {
         document.getElementById(
             "formaPagamento"
         );
+        const cep =
+    document
+        .getElementById("cep")
+        .value
+        .trim();
+
+const endereco =
+    document
+        .getElementById("endereco")
+        .value
+        .trim();
+
+const numero =
+    document
+        .getElementById("numero")
+        .value
+        .trim();
+
+const bairro =
+    document
+        .getElementById("bairro")
+        .value
+        .trim();
+
+const complemento =
+    document
+        .getElementById("complemento")
+        .value
+        .trim();
+
+const cidade =
+    document
+        .getElementById("cidade")
+        .value
+        .trim();
+
+const estado =
+    document
+        .getElementById("estado")
+        .value
+        .trim();
+
 
 
     const nome =
@@ -706,6 +969,34 @@ function abrirModal() {
 
     confirmacaoNome.textContent =
         nome;
+
+
+        // --------------------------------------------------
+// ENDEREÇO
+// --------------------------------------------------
+
+let textoEndereco =
+    `${endereco}, ${numero}<br>`;
+
+
+if (complemento !== "") {
+
+    textoEndereco +=
+        `${complemento}<br>`;
+
+}
+
+
+textoEndereco +=
+    `${bairro} - ${cidade}/${estado}<br>`;
+
+
+textoEndereco +=
+    `CEP: ${cep}`;
+
+
+confirmacaoEndereco.innerHTML =
+    textoEndereco;
 
 
     // --------------------------------------------------
@@ -862,6 +1153,48 @@ function gerarMensagemPedido() {
             )
             .value;
 
+          const cep =
+    document
+        .getElementById("cep")
+        .value
+        .trim();
+
+const endereco =
+    document
+        .getElementById("endereco")
+        .value
+        .trim();
+
+const numero =
+    document
+        .getElementById("numero")
+        .value
+        .trim();
+
+const bairro =
+    document
+        .getElementById("bairro")
+        .value
+        .trim();
+
+const complemento =
+    document
+        .getElementById("complemento")
+        .value
+        .trim();
+
+const cidade =
+    document
+        .getElementById("cidade")
+        .value
+        .trim();
+
+const estado =
+    document
+        .getElementById("estado")
+        .value
+        .trim();
+  
 
     // --------------------------------------------------
     // GERAR ID
@@ -897,6 +1230,47 @@ function gerarMensagemPedido() {
         "👤 Cliente: " +
         nome +
         "\n\n";
+
+        mensagem +=
+    "📍 ENDEREÇO DE ENTREGA\n\n";
+
+
+mensagem +=
+    "CEP: " +
+    cep +
+    "\n";
+
+
+mensagem +=
+    "Rua: " +
+    endereco +
+    ", " +
+    numero +
+    "\n";
+
+
+if (complemento !== "") {
+
+    mensagem +=
+        "Complemento: " +
+        complemento +
+        "\n";
+
+}
+
+
+mensagem +=
+    "Bairro: " +
+    bairro +
+    "\n";
+
+
+mensagem +=
+    "Cidade: " +
+    cidade +
+    " - " +
+    estado +
+    "\n\n";
 
 
     mensagem +=
@@ -1232,6 +1606,56 @@ if (formPedido) {
 
             }
 
+// ------------------------------------------
+// VALIDAR CEP
+// ------------------------------------------
+
+const cep =
+    document
+        .getElementById("cep")
+        .value
+        .replace(/\D/g, "");
+
+
+if (cep.length !== 8) {
+
+    alert(
+        "Digite um CEP válido."
+    );
+
+    document
+        .getElementById("cep")
+        .focus();
+
+    return;
+
+}
+
+
+// ------------------------------------------
+// VALIDAR ENDEREÇO
+// ------------------------------------------
+
+const numero =
+    document
+        .getElementById("numero")
+        .value
+        .trim();
+
+
+if (numero === "") {
+
+    alert(
+        "Digite o número do endereço."
+    );
+
+    document
+        .getElementById("numero")
+        .focus();
+
+    return;
+
+}
 
             // ------------------------------------------
             // ABRIR MODAL
