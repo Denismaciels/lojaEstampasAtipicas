@@ -66,7 +66,7 @@
             "codigo": "P05",
             "nome": "Bob Transparente",
             "descricao": "Estampa inspirada em personagens iconicos.",
-            "preco": 49.90,
+            "preco":49.90,
             "imagem": "./imgs/imgs/estampas/bob_transparent.png",
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
@@ -81,7 +81,7 @@
             "codigo": "P06",
             "nome": "Caveira colorida",
             "descricao": "Estampa inspirada em personagens iconicos.",
-            "preco": 49.90,
+            "preco":49.90,
             "imagem": "./imgs/imgs/estampas/caveira.colorida.png",
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
