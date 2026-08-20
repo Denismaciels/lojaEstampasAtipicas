@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./imgs/imgs/logo/possivel logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleIndex.css">
+
+    <title>MDR - Loja de Camisas</title>
+</head>
+
+<body onload="carregar()">
+
+    <!-- MENU -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <img
+                src="./imgs/imgs/logo/possivelLogo2.png"
+                alt="Logo da loja"
+            >
+        </div>
+
+        <ul class="menu">
+            
+
+            <li>
+                <a href="compras.html">
+                    🛒 Carrinho
+                    <span id="contadorCarrinho">0</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- BANNER PRINCIPAL   -->
+    <header class="hero">
+
+        <div class="hero-conteudo">
+
+            <span class="hero-tag">
+                NOVA COLEÇÃO
+            </span>
+
+            <h1>
+                CAMISETAS QUE<br>
+                <strong>CONTAM HISTÓRIAS</strong>
+            </h1>
+
+            <p>
+                Estampas exclusivas para quem gosta
+                de vestir sua personalidade.
+            </p>
+
+            <a href="#destaques" class="btn-hero">
+                CONFIRA NOSSOS DESTAQUES
+            </a>
+
+        </div>
+<!-- IMAGEM DO BANNER 
+        <div class="hero-imagem">
+
+            <img
+                src="./imgs/imgs/estampas/meduza.png"
+                alt="Camiseta A Vida Te Levará"
+            >
+
+        </div>    -->
+
+        <div class="hero-imagem">
+
+    <img
+        id="imagemBanner"
+        src="./imgs/imgs/estampas/meduza.png"
+        alt="Camiseta"
+    >
+
+    <button
+        class="btn-trocar-imagem"
+        onclick="trocarImagem()"
+        title="Trocar imagem"
+    >
+        🔄
+    </button>
+
+</div>
+    </header>
+
+
+    <!-- DESTAQUES -->
+    <main>
+
+        <section class="destaques" id="destaques">
+
+            <div class="titulo-secao">
+
+                <span>CONFIRA</span>
+
+                <h2>
+                    NOSSOS DESTAQUES
+                </h2>
+
+                <p>
+                    Algumas das nossas estampas favoritas.
+                </p>
+
+            </div>
+
+
+            <!-- CARDS -->
+            <div class="produtos-grid">
+
+
+                <!-- PRODUTO 1 -->
+                <article class="produto">
+
+                    <div class="produto-imagem">
+
+                        <span class="tag-promocao">
+                            DESTAQUE
+                        </span>
+
+                        <img
+                            src="./imgs/imgs/estampas/a vida te levara.png"
+                            alt="Camiseta A Vida Te Levará"
+                        >
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <h3>
+                            A Vida Te Levará
+                        </h3>
+
+                        <p class="descricao">
+                            Camiseta com estampa exclusiva.
+                        </p>
+
+                        <p class="preco">
+                            R$ 59,90
+                        </p>
+
+                        <button
+                            class="btn-comprar"
+                            type="button"
+                            onclick="adicionarCarrinho(1)"
+                        >
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 2 -->
+                <article class="produto">
+
+                    <div class="produto-imagem">
+
+                        <span class="tag-promocao">
+                            PROMOÇÃO
+                        </span>
+
+                        <img
+                            src="./imgs/imgs/estampas/a vida te levara.png"
+                            alt="Camiseta Estampa 2"
+                        >
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Estampa Urbana
+                        </h3>
+
+                        <p class="descricao">
+                            Design exclusivo e moderno.
+                        </p>
+
+                        <p class="preco">
+                            R$ 69,90
+                        </p>
+
+                        <button
+                            class="btn-comprar"
+                            type="button"
+                            onclick="adicionarCarrinho(2)"
+                        >
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 3 -->
+                <article class="produto">
+
+                    <div class="produto-imagem">
+
+                        <span class="tag-promocao">
+                            DESTAQUE
+                        </span>
+
+                        <img
+                            src="./imgs/imgs/estampas/a vida te levara.png"
+                            alt="Camiseta Estampa 3"
+                        >
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <h3>
+                            Sua História
+                        </h3>
+
+                        <p class="descricao">
+                            Uma estampa para marcar momentos.
+                        </p>
+
+                        <p class="preco">
+                            R$ 59,90
+                        </p>
+
+                        <button
+                            class="btn-comprar"
+                            type="button"
+                            onclick="adicionarCarrinho(3)"
+                        >
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- BANNER DE PROMOÇÃO -->
+        <section class="promocao">
+
+            <div class="promocao-conteudo">
+
+                <span>
+                    🔥 OFERTA ESPECIAL
+                </span>
+
+                <h2>
+                    LEVE 2 CAMISETAS
+                </h2>
+
+                <p>
+                    Aproveite nossa promoção e ganhe
+                    <strong>10% de desconto</strong>.
+                </p>
+
+                <a href="./estampas.html" class="btn-promocao">
+                    APROVEITAR PROMOÇÃO
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+        <section class="sobre">
+
+            <div>
+
+                <span>
+                    SOBRE A MDR
+                </span>
+
+                <h2>
+                    Vista aquilo<br>
+                    que representa você.
+                </h2>
+
+            </div>
+
+            <p>
+                Criamos camisetas com estampas pensadas
+                para pessoas que gostam de expressar sua
+                personalidade através do que vestem.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            &copy; 2026 MDR - Loja de Camisas
+        </p>
+
+        <button
+            class="btn-atualizar"
+            onclick="window.location.reload()"
+        >
+            Atualizar página
+        </button>
+
+    </footer>
+
+
+    <script src="./script/scriptIndex.js"></script>
+    
+
+</body>
+
+</html>
+```

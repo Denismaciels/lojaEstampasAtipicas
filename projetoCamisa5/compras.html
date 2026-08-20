@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/compras.css">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Carrinho - Loja de Camisas</title>
+
+    <link rel="icon" href="./imgs/icons/icons/carrinho-de-compras.png" type="image/png">
+
+    
+</head>
+
+
+<body>
+<!-- Menu com logo e navegação  -->
+
+<!-- MENU -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="./imgs/imgs/logo/possivelLogo2.png" alt="Logo da loja">
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+           <!-- <li><a href="camisas.html">Camisas</a></li>
+            <li><a href="estampas.html">Estampas</a></li>
+            <li><a href="contato.html">Contato</a></li>   -->
+            <!-- <li><a href="compras.html">🛒 Carrinho</a></li>  -->
+             <li>  <a href="estampas.html"> ← Continuar comprando</a>
+<!-- <span id="contadorCarrinho"> 0 </span> -->   </li>
+        </ul>
+
+    </nav>
+
+
+
+
+    <main class="container">
+
+    <div class="titulo-carrinho">
+
+        <h1>🛒 Meu Carrinho</h1>
+
+        <p>
+            Confira seus produtos antes de finalizar o pedido.
+        </p>
+
+    </div>
+
+<!-- PRODUTOS -->
+
+    <div id="listaCarrinho"></div>
+
+<!-- RESUMO DO PEDIDO   -->
+    <section
+            class="resumo"
+            id="resumo"
+        >
+
+            <h2>
+                Resumo do pedido
+            </h2>
+
+
+            <div class="linha-resumo">
+
+                <span>
+                    Produtos
+                </span>
+
+                <span id="totalProdutos">
+                    0
+                </span>
+
+            </div>
+
+
+            <div class="linha-resumo">
+
+                <span>
+                    Quantidade de peças
+                </span>
+
+                <span id="totalPecas">
+                    0
+                </span>
+
+            </div>
+
+
+            <div class="linha-resumo subtotal">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <span id="subtotal">
+                    R$ 0,00
+                </span>
+
+            </div>
+
+
+            <div class="linha-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 FORMULÁRIO DO CLIENTE
+            =================================================== -->
+
+            <form id="formPedido">
+
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome do cliente
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label for="formaPagamento">
+                        Preferência de pagamento
+                    </label>
+
+
+                    <select
+                        id="formaPagamento"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione...
+                        </option>
+
+                        <option value="PIX">
+                            PIX
+                        </option>
+
+                        <option value="Dinheiro">
+                            Dinheiro
+                        </option>
+
+                        <option value="Cartão de Crédito">
+                            Cartão de Crédito
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <button
+                    class="btn-whatsapp"
+                    type="submit"
+                >
+                    📱 Revisar pedido
+                </button>
+
+
+            </form>
+
+        </section>
+
+</main>
+
+<!-- MODAL DE CONFIRMAÇÃO -->
+
+<div id="modalConfirmacao" class="modal-overlay">
+
+    <div class="modal">
+
+        <button
+            type="button"
+            class="modal-fechar"
+            onclick="fecharModal()"
+            aria-label="Fechar"
+        >
+            ×
+        </button>
+
+        <div class="modal-cabecalho">
+
+            <div class="modal-icone">
+                🛒
+            </div>
+
+            <h2>
+                Confirmar seu pedido
+            </h2>
+
+            <p>
+                Confira os dados antes de enviar.
+            </p>
+
+        </div>
+
+
+        <div class="modal-cliente">
+
+            <span>Cliente</span>
+
+            <strong id="confirmacaoNome">
+                —
+            </strong>
+
+        </div>
+
+
+        <div
+            id="confirmacaoProdutos"
+            class="modal-produtos"
+        >
+            <!-- Produtos serão inseridos pelo JavaScript -->
+        </div>
+
+
+        <div class="modal-pagamento">
+
+            <span>
+                Forma de pagamento
+            </span>
+
+            <strong id="confirmacaoPagamento">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="modal-total">
+
+            <span>
+                Total do pedido
+            </span>
+
+            <strong id="confirmacaoTotal">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <div class="modal-aviso">
+
+            📱 Após confirmar, o pedido será
+            enviado para o WhatsApp.
+
+        </div>
+
+
+        <div class="modal-acoes">
+
+            <button
+                type="button"
+                class="btn-voltar"
+                onclick="fecharModal()"
+            >
+                ← Voltar
+            </button>
+
+
+            <button
+                type="button"
+                class="btn-confirmar"
+                onclick="confirmarPedido()"
+            >
+                ✓ Confirmar pedido
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- <script  src="./script.js"></script> -->
+<script src="./script/scriptcompras.js"> </script>
+
+</body>
+
+</html>

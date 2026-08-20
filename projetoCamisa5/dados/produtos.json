@@ -1,0 +1,110 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "codigo": "P01",
+            "nome": "A Vida Te Levará",
+            "descricao": "Camiseta com estampa exclusiva.",
+            "preco": 49.90,
+            "imagem": "./imgs/imgs/estampas/a vida te levara.png",
+            "tamanhos": ["P", "M", "G"],
+            "cores": [
+                {"nome": "Branca", "codigo": "C01"},
+                {"nome": "Preta", "codigo": "C02"},
+                {"nome": "Azul", "codigo": "C03"}
+            ],
+            "ativo": true
+        },
+        {
+            "id": 2,
+            "codigo": "P02",
+            "nome": "Arena do Gremio",
+            "descricao": "Estampa criativa e exclusiva.",
+            "preco": 49.90,
+            "imagem": "./imgs/imgs/estampas/arena.gremio.jpeg",
+            "tamanhos": ["P", "M", "G"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "Azul" }
+            ],
+            "ativo": true
+        },
+        {
+            "id": 3,
+            "codigo": "P03",
+            "nome": "Astronauta",
+            "descricao": "Estampa inspirada no espaço.",
+            "preco": 69.90,
+            "imagem": "./imgs/imgs/estampas/astronauta.tartaruga1.png",
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "vermelho" },
+                { "codigo": "C04", "nome": "Azul" }
+            ],
+            "ativo": true
+        },
+        {
+            "id": 4,
+            "codigo": "P04",
+            "nome": "Beira-Rio",
+            "descricao": "Estampa inspirada no estádio Beira-Rio.",
+            "preco": 69.90,
+            "imagem": "./imgs/imgs/estampas/beirario.jpeg",
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "vermelho" }
+            ],
+            "ativo": true
+        },
+         {
+            "id": 5,
+            "codigo": "P05",
+            "nome": "Bob Transparente",
+            "descricao": "Estampa inspirada em personagens iconicos.",
+            "preco": 59.90,
+            "imagem": "./imgs/imgs/estampas/bob_transparent.png",
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "Vermelho" }
+            ],
+            "ativo": true
+        },
+         {
+            "id": 6,
+            "codigo": "P06",
+            "nome": "Caveira colorida",
+            "descricao": "Estampa inspirada em personagens iconicos.",
+            "preco": 59.90,
+            "imagem": "./imgs/imgs/estampas/caveira.colorida.png",
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "Vermelho" }
+            ],
+            "ativo": true
+        },
+        {
+            "id": 7,
+            "codigo": "P07",
+            "nome": "MEDUSA",
+            "descricao": "Estampa inspirada em personagens iconicos.",
+            "preco": 59.90,
+            "imagem": "./imgs/imgs/estampas/meduza.png",
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "Vermelho" }
+            ],
+            "ativo": true
+        }
+    ]
+}
