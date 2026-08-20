@@ -144,8 +144,95 @@
                     >
 
                 </div>
+                <!-- endereço-->
+                    <div class="campo-endereco">
 
+                <h3>📍 Endereço de entrega</h3>
 
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input
+                        type="text"
+                        id="cep"
+                        placeholder="00000-000"
+                        maxlength="9"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="endereco">Rua / Avenida</label>
+                    <input
+                        type="text"
+                        id="endereco"
+                        placeholder="Digite sua rua ou avenida"
+                        required
+                    >
+                </div>
+
+                <div class="endereco-linha">
+
+                    <div class="campo">
+                        <label for="numero">Número</label>
+                        <input
+                            type="text"
+                            id="numero"
+                            placeholder="Número"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="complemento">Complemento</label>
+                        <input
+                            type="text"
+                            id="complemento"
+                            placeholder="Casa, apto..."
+                        >
+                    </div>
+
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input
+                        type="text"
+                        id="bairro"
+                        placeholder="Digite seu bairro"
+                        required
+                    >
+                </div>
+
+                <div class="endereco-linha">
+
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input
+                            type="text"
+                            id="cidade"
+                            placeholder="Digite sua cidade"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <input
+                            type="text"
+                            id="estado"
+                            placeholder="RS"
+                            maxlength="2"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+                <!-- ==================================================
+                 FORMA DE PAGAMENTO
+            =================================================== -->
 
                 <div class="campo">
 
@@ -234,6 +321,17 @@
             <strong id="confirmacaoNome">
                 —
             </strong>
+
+        </div>
+        <div class="modal-endereco">
+
+                <span>
+                    📍 Endereço de entrega
+                </span>
+
+                <strong id="confirmacaoEndereco">
+                    —
+                </strong>
 
         </div>
 
