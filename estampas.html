@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="icon"
+        href="./imgs/imgs/logo/possivel logo.png"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+    <title>Loja de Camisas</title>
+
+    <style>
+
+        #contadorCarrinho {
+
+            background-color: #25D366;
+            color: white;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 22px;
+            height: 22px;
+
+            padding: 0 6px;
+
+            margin-left: 5px;
+
+            border-radius: 50%;
+
+            font-size: 12px;
+            font-weight: bold;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body onload="carregar()">
+
+
+    <!-- ==================================================
+         MENU
+    ================================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img
+                src="./imgs/imgs/logo/possivelLogo2.png"
+                alt="Logo da loja"
+            >
+
+        </div>
+
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+
+                <a href="compras.html">
+
+                    🛒 Carrinho
+
+                    <span id="contadorCarrinho">
+                        0
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ==================================================
+         CABEÇALHO
+    ================================================== -->
+
+    <header class="cabecalho">
+
+        <h1>
+            Escolha suas camisetas favoritas 👕
+        </h1>
+
+        <p>
+            Escolha o tamanho, a cor e a quantidade.
+        </p>
+
+    </header>
+
+
+    <!-- ==================================================
+         PRODUTOS
+         
+         O JavaScript vai preencher este elemento
+         automaticamente usando o produtos.json.
+    ================================================== -->
+
+    <main
+        class="grade"
+        id="gradeProdutos"
+    >
+
+        <!-- Produtos serão criados pelo JavaScript -->
+
+    </main>
+
+
+    <!-- ==================================================
+         RODAPÉ
+    ================================================== -->
+
+    <footer>
+
+        <button
+            class="btn-atualizar"
+            onclick="window.location.reload()"
+        >
+            Atualizar página
+        </button>
+
+
+        <p>
+            &copy; MDR - Loja de Camisas
+        </p>
+
+    </footer>
+
+
+    <!-- ==================================================
+         NOTIFICAÇÃO
+    ================================================== -->
+
+    <div
+        id="notificacao"
+        class="notificacao"
+    >
+
+        <span class="notificacao-icone">
+            ✓
+        </span>
+
+
+        <div>
+
+            <strong>
+                Produto adicionado!
+            </strong>
+
+
+            <p id="mensagemNotificacao">
+                A camiseta foi adicionada ao carrinho.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="./script/script.js"></script>
+
+</body>
+
+</html>

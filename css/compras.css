@@ -1,0 +1,877 @@
+.container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+/* ======================================================
+   TÍTULO
+====================================================== */
+
+.titulo-carrinho {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.titulo-carrinho h1 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.titulo-carrinho p {
+
+    color: #666;
+
+}
+
+
+        /* =========================
+           PRODUTOS
+        ========================= */
+       .item {
+
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns:
+        110px 1fr auto;
+    align-items: center;
+    gap: 20px;
+
+}
+/* ======================================================
+   IMAGEM
+====================================================== */
+
+.item-imagem {
+
+    width: 110px;
+    height: 110px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+
+.item-imagem img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+
+        .item-info h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 19px;
+
+}
+
+
+        .item-info p {
+
+    margin: 5px 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+.item-info .preco {
+
+    color: #25D366;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+}
+/*
+        .preco {
+
+            color: #25D366 !important;
+            font-weight: bold;
+            font-size: 18px;
+
+        }      */
+
+
+        /* =========================
+           QUANTIDADE
+        ========================= */
+
+        .quantidade {
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+
+        .quantidade button {
+
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 7px;
+            background-color: #171717;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+
+        }
+
+
+        .quantidade button:hover {
+
+            background-color: #25D366;
+
+        }
+
+.quantidade strong {
+
+    min-width: 25px;
+
+    text-align: center;
+
+}
+        /* =========================
+           REMOVER
+        ========================= */
+
+        .remover {
+
+            background-color: #e53935 !important;
+
+        }
+        /* ======================================================
+   REMOVER
+====================================================== */
+
+.quantidade .remover {
+
+    background: #e53935;
+
+    margin-left: 8px;
+
+}
+
+
+.quantidade .remover:hover {
+
+    background: #c62828;
+
+}
+/* ======================================================
+   RESUMO
+====================================================== */
+
+.resumo {
+
+    background: white;
+
+    padding: 25px;
+
+    margin-top: 30px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.resumo h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+}
+/* ======================================================
+   LINHAS
+====================================================== */
+
+.linha-resumo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    color: #555;
+
+}
+
+
+.subtotal {
+
+    border-bottom:
+        1px solid #ddd;
+
+    padding-bottom: 15px;
+
+}
+
+
+.linha-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    margin-bottom: 25px;
+
+    font-size: 24px;
+
+}
+
+
+.linha-total strong {
+
+    color: #25D366;
+
+}
+
+
+        /* =========================
+           TOTAL
+        ========================= */
+
+        .resumo {
+
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 25px;
+            box-shadow:
+                0 3px 10px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        .total {
+
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+
+        }
+        .total-valor {
+            color: #25D366;
+        }
+
+
+        /* =========================
+           FORMULÁRIO
+        ========================= */
+/*
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+*/
+.campo {
+
+    margin-bottom: 18px;
+
+}
+
+
+.campo label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+}
+
+
+.campo input,
+.campo select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+}
+
+        /* =========================
+           BOTÃO WHATSAPP
+        ========================= */
+
+        .btn-whatsapp {
+            width: 100%;
+            padding: 15px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+
+
+        /* =========================
+           CARRINHO VAZIO
+        ========================= */
+
+        .vazio {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .vazio a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #171717;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        /* =========================
+           CELULAR
+        ========================= */
+        @media (max-width: 700px) {
+            /* 
+
+            .item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .quantidade {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .total {
+                font-size: 20px;
+            }
+        }
+         #contadorCarrinho {
+                 background-color: #25D366;
+                 color: white;
+                 display: inline-flex;
+                 align-items: center;
+                 justify-content: center;
+                 min-width: 22px;
+                height: 22px;
+                padding: 0 6px;
+                 margin-left: 5px;
+                border-radius: 50%;
+                font-size: 12px;
+                font-weight: bold;
+        }
+                */
+
+@media (max-width: 700px) {
+
+    .item {
+
+        grid-template-columns: 85px 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .item-imagem {
+
+        width: 85px;
+
+        height: 85px;
+
+    }
+
+
+    .quantidade {
+
+        grid-column: 1 / -1;
+
+        justify-content: flex-end;
+
+    }
+
+
+    .linha-total {
+
+        font-size: 21px;
+
+    }
+}
+}
+
+/* =================================
+   MODAL DE CONFIRMAÇÃO
+================================= */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+}
+
+
+.modal-overlay.ativo {
+
+    display: flex;
+
+}
+
+
+/* =================================
+   MODAL
+================================= */
+
+.modal {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.30);
+
+    animation:
+        aparecerModal
+        0.25s
+        ease;
+
+}
+
+
+@keyframes aparecerModal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =================================
+   FECHAR
+================================= */
+
+.modal-fechar {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    color: #777;
+
+    cursor: pointer;
+
+}
+
+
+.modal-fechar:hover {
+
+    color: #171717;
+
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.modal-cabecalho {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.modal-icone {
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.modal-cabecalho h2 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+}
+
+
+.modal-cabecalho p {
+
+    margin-top: 7px;
+
+    color: #777;
+
+}
+
+
+/* =================================
+   CLIENTE
+================================= */
+
+.modal-cliente {
+
+    background: #f7f7f7;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.modal-cliente span,
+.modal-pagamento span {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #777;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* =================================
+   PRODUTOS
+================================= */
+
+.modal-produtos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.confirmacao-produto {
+
+    padding: 15px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 10px;
+
+}
+
+
+.confirmacao-produto-nome {
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+}
+
+
+.confirmacao-produto-info {
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+
+.confirmacao-produto-preco {
+
+    margin-top: 8px;
+
+    color: #25D366;
+
+    font-weight: bold;
+
+}
+
+
+/* =================================
+   PAGAMENTO
+================================= */
+
+.modal-pagamento {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #eee;
+
+}
+
+
+/* =================================
+   TOTAL
+================================= */
+
+.modal-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-top: 1px solid #eee;
+
+    font-size: 20px;
+
+}
+
+
+.modal-total strong {
+
+    color: #25D366;
+
+    font-size: 24px;
+
+}
+
+
+/* =================================
+   AVISO
+================================= */
+
+.modal-aviso {
+
+    background: #f0fff5;
+
+    color: #176b3a;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =================================
+   BOTÕES
+================================= */
+
+.modal-acoes {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.modal-acoes button {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-voltar {
+
+    background: #eeeeee;
+
+    color: #333;
+
+}
+
+
+.btn-voltar:hover {
+
+    background: #dddddd;
+
+}
+
+
+.btn-confirmar {
+
+    background: #25D366;
+
+    color: white;
+
+}
+
+
+.btn-confirmar:hover {
+
+    background: #128C7E;
+
+}
+
+
+/* =================================
+   CELULAR
+================================= */
+
+@media (max-width: 600px) {
+
+    .modal {
+
+        padding: 22px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .modal-acoes {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .btn-confirmar,
+    .btn-voltar {
+
+        width: 100%;
+
+    }
+
+}
