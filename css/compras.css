@@ -779,6 +779,72 @@
     margin-bottom: 20px;
 
 }
+/* =========================================================
+   ENDEREÇO
+========================================================= */
+
+.campo-endereco {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 18px 0;
+}
+
+.campo-endereco h3 {
+    margin: 0 0 14px;
+    font-size: 16px;
+    color: #222;
+}
+
+.endereco-linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.campo {
+    margin-bottom: 12px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.campo input[readonly] {
+    background: #eeeeee;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+
+    .endereco-linha {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .endereco-linha {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 
 
 /* =================================
