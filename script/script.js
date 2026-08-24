@@ -314,6 +314,97 @@ function montarProdutos() {
             selectCor
         );
 
+        // ==================================================
+// ALTERAR VISUALIZAÇÃO CONFORME A COR
+// ==================================================
+
+function atualizarVisualizacao() {
+
+    const corSelecionada =
+        selectCor.value;
+
+    const configuracaoCor =
+        produto.cores.find(cor => {
+
+            if (typeof cor === "object") {
+
+                return (
+                    cor.nome === corSelecionada ||
+                    cor.valor === corSelecionada
+                );
+
+            }
+
+            return cor === corSelecionada;
+
+        });
+
+
+    // Se a cor não tiver configuração,
+    // usa a imagem e fundo padrão.
+
+    if (!configuracaoCor) {
+
+        areaImagem.style.backgroundColor =
+            "#ffffff";
+
+        imagem.src =
+            produto.imagem;
+
+        return;
+
+    }
+
+
+    // ==================================================
+    // FUNDO
+    // ==================================================
+
+    if (configuracaoCor.fundo) {
+
+        areaImagem.style.backgroundColor =
+            configuracaoCor.fundo;
+
+    } else {
+
+        areaImagem.style.backgroundColor =
+            "#ffffff";
+
+    }
+
+
+    // ==================================================
+    // IMAGEM
+    // ==================================================
+
+    if (configuracaoCor.imagem) {
+
+        imagem.src =
+            configuracaoCor.imagem;
+
+    } else {
+
+        imagem.src =
+            produto.imagem;
+
+    }
+
+}
+
+
+// Quando o usuário trocar a cor
+
+selectCor.addEventListener(
+    "change",
+    atualizarVisualizacao
+);
+
+
+// Inicializa com a primeira cor
+
+atualizarVisualizacao();
+
+
 
         // ==================================================
         // QUANTIDADE
