@@ -114,7 +114,7 @@
             "nome": "Caveira cogumelo",
             "descricao": "Estampa criativa e exclusiva.",
             "preco": 49.90,
-            "imagem": "./imgs/imgs/estampas/novasEstampas/cav.cogumrlo.col_TRANSPARENTE.png",
+            "imagem": "./imgs/imgs/estampas/cav.cogumrlo.col_TRANSPARENTE.png",
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
@@ -130,7 +130,7 @@
             "nome": "Caveira Rosa mordida",
             "descricao": "Estampa criativa e exclusiva.",
             "preco": 49.90,
-            "imagem": "./imgs/imgs/estampas/novasEstampas/cavei.rosa.boca_TRANSPARENTE.png",
+            "imagem": "./imgs/imgs/estampas/cavei.rosa.boca_TRANSPARENTE.png",
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
@@ -146,7 +146,7 @@
             "nome": "Caveira Cogumelo pto-bco",
             "descricao": "Estampa criativa e exclusiva.",
             "preco": 49.90,
-            "imagem": "./imgs/imgs/estampas/novasEstampas/caveira.cogumelo_TRANSPARENTE.png",
+            "imagem": "./imgs/imgs/estampas/caveira.cogumelo_TRANSPARENTE.png",
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
