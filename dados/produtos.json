@@ -83,6 +83,7 @@
             "descricao": "Estampa inspirada em personagens iconicos.",
             "preco":49.90,
             "imagem": "./imgs/imgs/estampas/caveira.colorida.png",
+            "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
                 { "codigo": "C01", "nome": "Branca" },
@@ -98,6 +99,55 @@
             "descricao": "Estampa inspirada em personagens iconicos.",
             "preco": 49.90,
             "imagem": "./imgs/imgs/estampas/meduza.png",
+            "novidade": true,
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "Vermelho" }
+            ],
+            "ativo": true
+        },
+         {
+            "id": 8,
+            "codigo": "P08",
+            "nome": "Caveira cogumelo",
+            "descricao": "Estampa criativa e exclusiva.",
+            "preco": 49.90,
+            "imagem": "./imgs/imgs/estampas/novasEstampas/cav.cogumrlo.col_TRANSPARENTE.png",
+            "novidade": true,
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "Vermelho" }
+            ],
+            "ativo": true
+        },
+          {
+            "id": 9,
+            "codigo": "P09",
+            "nome": "Caveira Rosa mordida",
+            "descricao": "Estampa criativa e exclusiva.",
+            "preco": 49.90,
+            "imagem": "./imgs/imgs/estampas/novasEstampas/cavei.rosa.boca_TRANSPARENTE.png",
+            "novidade": true,
+            "tamanhos": ["P", "M", "G", "GG"],
+            "cores": [
+                { "codigo": "C01", "nome": "Branca" },
+                { "codigo": "C02", "nome": "Preta" },
+                { "codigo": "C03", "nome": "Vermelho" }
+            ],
+            "ativo": true
+        },
+        {
+            "id": 10,
+            "codigo": "P10",
+            "nome": "Caveira Cogumelo pto-bco",
+            "descricao": "Estampa criativa e exclusiva.",
+            "preco": 49.90,
+            "imagem": "./imgs/imgs/estampas/novasEstampas/caveira.cogumelo_TRANSPARENTE.png",
+            "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
                 { "codigo": "C01", "nome": "Branca" },
