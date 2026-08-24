@@ -708,8 +708,20 @@ function atualizarResumo() {
             0
 
         );
+        const valorSubTotal = calcularSubtotalPedido();
+        const valorDesconto = calcularDesconto();
+        const valorTotalComDesconto = valorSubTotal - valorDesconto;
 
+        subtotal.textContent = formatarPreco(valorSubTotal);
+        if (valorDesconto > 0) {
+            linhaDesconto.style.display = "flex";
+            desconto.textContent = "- " + formatarPreco(valorDesconto);
+        } else {
+            linhaDesconto.style.display = "none";
+        }
+        total.textContent = formatarPreco(valorTotalComDesconto);
 
+/*
     subtotal.textContent =
         formatarPreco(
             valorTotal
@@ -720,7 +732,7 @@ function atualizarResumo() {
         formatarPreco(
             valorTotal
         );
-
+*/
 }
 
 
@@ -872,11 +884,69 @@ function gerarIdPedido() {
     return codigo;
 
 }
+// ======================================================
+// CALCULAR PROMOÇÃO
+// ======================================================
+//
+// Comprando 2 ou mais peças:
+// 10% de desconto
+//
+// ======================================================
+
+function calcularDesconto() {
+
+    const quantidadePecas =
+        carrinho.reduce(
+
+            (soma, produto) =>
+                soma +
+                Number(produto.quantidade),
+
+            0
+
+        );
+
+
+    const subtotal =
+        calcularSubtotalPedido();
+
+
+    // Menos de 2 peças
+    if (quantidadePecas < 2) {
+
+        return 0;
+
+    }
+
+
+    // 10% de desconto
+    return subtotal * 0.10;
+
+}
+// ======================================================
+// CALCULAR SUBTOTAL
+// ======================================================
+
+function calcularSubtotalPedido() {
+
+    return carrinho.reduce(
+
+        (soma, produto) =>
+
+            soma +
+            Number(produto.preco) *
+            Number(produto.quantidade),
+
+        0
+
+    );
+
+}
 
 
 // ======================================================
 // CALCULAR TOTAL DO PEDIDO
-// ======================================================
+/*/ ======================================================
 
 function calcularTotalPedido() {
 
@@ -893,7 +963,20 @@ function calcularTotalPedido() {
     );
 
 }
+*/
+function calcularTotalPedido() {
 
+    const subtotal =
+        calcularSubtotalPedido();
+
+
+    const desconto =
+        calcularDesconto();
+
+
+    return subtotal - desconto;
+
+}
 
 // ======================================================
 // ABRIR MODAL
