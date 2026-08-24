@@ -9,9 +9,10 @@
             "imagem": "./imgs/imgs/estampas/a vida te levara.png",
             "tamanhos": ["P", "M", "G"],
             "cores": [
-                {"nome": "Branca", "codigo": "C01"},
-                {"nome": "Preta", "codigo": "C02"},
-                {"nome": "Azul", "codigo": "C03"}
+               { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -24,9 +25,10 @@
             "imagem": "./imgs/imgs/estampas/arena.gremio.jpeg",
             "tamanhos": ["P", "M", "G"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "Azul" }
+               { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -39,10 +41,10 @@
             "imagem": "./imgs/imgs/estampas/astronauta.tartaruga1.png",
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "vermelho" },
-                { "codigo": "C04", "nome": "Azul" }
+                { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -55,9 +57,10 @@
             "imagem": "./imgs/imgs/estampas/beirario.jpeg",
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "vermelho" }
+               { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -70,9 +73,10 @@
             "imagem": "./imgs/imgs/estampas/bob_transparent.png",
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "Vermelho" }
+                { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -86,9 +90,10 @@
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "Vermelho" }
+               { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -102,9 +107,10 @@
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "Vermelho" }
+               { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -118,9 +124,10 @@
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "Vermelho" }
+               { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -134,9 +141,10 @@
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "Vermelho" }
+                { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         },
@@ -150,9 +158,10 @@
             "novidade": true,
             "tamanhos": ["P", "M", "G", "GG"],
             "cores": [
-                { "codigo": "C01", "nome": "Branca" },
-                { "codigo": "C02", "nome": "Preta" },
-                { "codigo": "C03", "nome": "Vermelho" }
+                { "codigo": "C01", "nome": "Branca","fundo":"#ffffff" },
+                { "codigo": "C02", "nome": "Preta", "fundo":"#111111" },
+                { "codigo": "C03", "nome": "vermelho","fundo":"#FF0000" },
+                { "codigo": "C04", "nome": "Azul" , "fundo":"#5391c7"}
             ],
             "ativo": true
         }
