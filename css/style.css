@@ -700,3 +700,29 @@ footer p {
     }
 
 }
+
+.produto-imagem {
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+
+    overflow: hidden;
+
+    transition:
+        background-color 0.3s ease;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        opacity 0.2s ease;
+}
