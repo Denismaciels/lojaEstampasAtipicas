@@ -21,6 +21,17 @@ let produtos = [];
 
 
 // ======================================================
+// IMAGENS DO BANNER
+// ======================================================
+
+let imagens = [];
+
+let indice = 0;
+
+let intervaloBanner = null;
+
+
+// ======================================================
 // INICIALIZAÇÃO
 // ======================================================
 
@@ -60,6 +71,10 @@ async function carregarProdutos() {
             await resposta.json();
 
 
+        // --------------------------------------------------
+        // ACEITA JSON COMO ARRAY OU OBJETO
+        // --------------------------------------------------
+
         produtos =
             Array.isArray(dados)
                 ? dados
@@ -81,10 +96,18 @@ async function carregarProdutos() {
         );
 
 
-        // Atualiza os produtos que já existem
-        // no HTML do index
+        // --------------------------------------------------
+        // ATUALIZA OS PRODUTOS DO INDEX
+        // --------------------------------------------------
 
         sincronizarDestaques();
+
+
+        // --------------------------------------------------
+        // CARREGA AS NOVIDADES PARA O BANNER
+        // --------------------------------------------------
+
+        carregarNovidades();
 
 
     } catch (erro) {
@@ -119,7 +142,9 @@ function encontrarProduto(id) {
 
 function obterNomeCor(cor) {
 
-    // Se não existir
+    // --------------------------------------------------
+    // SE NÃO EXISTIR
+    // --------------------------------------------------
 
     if (
         cor === null ||
@@ -131,7 +156,9 @@ function obterNomeCor(cor) {
     }
 
 
-    // Se já for texto
+    // --------------------------------------------------
+    // SE JÁ FOR TEXTO OU NÚMERO
+    // --------------------------------------------------
 
     if (
         typeof cor === "string" ||
@@ -143,7 +170,9 @@ function obterNomeCor(cor) {
     }
 
 
-    // Se for objeto
+    // --------------------------------------------------
+    // SE FOR OBJETO
+    // --------------------------------------------------
 
     if (
         typeof cor === "object"
@@ -376,13 +405,6 @@ function adicionarCarrinho(id) {
     // TAMANHO
     // ------------------------------------------
 
-    /*
-     * No index não temos seleção de tamanho.
-     *
-     * Então utilizamos o primeiro tamanho
-     * disponível no JSON.
-     */
-
     const tamanho =
         obterTamanhoPadrao(produto);
 
@@ -390,12 +412,6 @@ function adicionarCarrinho(id) {
     // ------------------------------------------
     // COR
     // ------------------------------------------
-
-    /*
-     * No index também não temos seleção de cor.
-     *
-     * Pegamos a primeira cor cadastrada.
-     */
 
     const cor =
         obterCorPadrao(produto);
@@ -610,7 +626,9 @@ function alterarFundoBanner(event) {
     }
 
 
-    // Verifica se é imagem
+    // ------------------------------------------
+    // VERIFICA SE É IMAGEM
+    // ------------------------------------------
 
     if (
         !arquivo.type.startsWith(
@@ -725,29 +743,122 @@ function carregarFundoBanner() {
 
 
 // ======================================================
-// IMAGENS DO BANNER
+// CARREGAR IMAGENS DAS NOVIDADES
 // ======================================================
 
-const imagens = [
+function carregarNovidades() {
 
-    "./imgs/imgs/estampas/meduza.png",
+    // --------------------------------------------------
+    // VERIFICAR SE OS PRODUTOS FORAM CARREGADOS
+    // --------------------------------------------------
 
-    "./imgs/imgs/estampas/a vida te levara.png",
+    if (
+        !Array.isArray(produtos)
+    ) {
 
-    "./imgs/imgs/estampas/bob_transparent.png",
+        console.warn(
+            "Produtos ainda não foram carregados."
+        );
 
-    "./imgs/imgs/estampas/coruja_transparente.png",
+        return;
 
-    "./imgs/imgs/estampas/viking_recortado.png",
-
-    "./imgs/imgs/estampas/caveira.colorida.png",
-
-    "./imgs/imgs/estampas/astronauta.tartaruga1.png"
-
-];
+    }
 
 
-let indice = 0;
+    // --------------------------------------------------
+    // PEGAR SOMENTE PRODUTOS COM NOVIDADE = TRUE
+    // --------------------------------------------------
+
+    const produtosNovidades =
+        produtos.filter(
+            produto =>
+                produto.novidade === true
+        );
+
+
+    // --------------------------------------------------
+    // PEGAR SOMENTE AS IMAGENS
+    // --------------------------------------------------
+
+    imagens =
+        produtosNovidades
+            .map(
+                produto =>
+                    produto.imagem
+            )
+            .filter(
+                imagem =>
+                    imagem
+            );
+
+
+    console.log(
+        "Produtos marcados como novidade:",
+        produtosNovidades
+    );
+
+
+    console.log(
+        "Imagens das novidades:",
+        imagens
+    );
+
+
+    // --------------------------------------------------
+    // VERIFICAR SE EXISTEM NOVIDADES
+    // --------------------------------------------------
+
+    if (
+        imagens.length === 0
+    ) {
+
+        console.warn(
+            "Nenhum produto marcado como novidade."
+        );
+
+        return;
+
+    }
+
+
+    // --------------------------------------------------
+    // RESETAR ÍNDICE
+    // --------------------------------------------------
+
+    indice = 0;
+
+
+    // --------------------------------------------------
+    // MOSTRAR PRIMEIRA IMAGEM
+    // --------------------------------------------------
+
+    trocarImagem();
+
+
+    // --------------------------------------------------
+    // EVITAR INTERVALOS DUPLICADOS
+    // --------------------------------------------------
+
+    if (intervaloBanner) {
+
+        clearInterval(
+            intervaloBanner
+        );
+
+    }
+
+
+    // --------------------------------------------------
+    // TROCA AUTOMÁTICA
+    // --------------------------------------------------
+
+    intervaloBanner =
+        setInterval(
+            trocarImagem,
+            5000
+        );
+
+}
 
 
 // ======================================================
@@ -769,9 +880,38 @@ function trocarImagem() {
     }
 
 
+    // --------------------------------------------------
+    // VERIFICAR SE EXISTEM IMAGENS
+    // --------------------------------------------------
+
+    if (
+        !imagens.length
+    ) {
+
+        return;
+
+    }
+
+
+    // --------------------------------------------------
+    // ALTERAR IMAGEM
+    // --------------------------------------------------
+
     imagem.src =
         imagens[indice];
 
+
+    // --------------------------------------------------
+    // TEXTO ALTERNATIVO
+    // --------------------------------------------------
+
+    imagem.alt =
+        "Novidade da loja";
+
+
+    // --------------------------------------------------
+    // PRÓXIMA IMAGEM
+    // --------------------------------------------------
 
     indice++;
 
@@ -785,16 +925,6 @@ function trocarImagem() {
     }
 
 }
-
-
-// ======================================================
-// TROCA AUTOMÁTICA
-// ======================================================
-
-setInterval(
-    trocarImagem,
-    5000
-);
 
 
 // ======================================================
@@ -817,8 +947,10 @@ function mostrarNotificacao(
         );
 
 
-    // Se o index não possuir
-    // esses elementos, simplesmente sai.
+    // ------------------------------------------
+    // SE O INDEX NÃO POSSUIR
+    // ESSES ELEMENTOS
+    // ------------------------------------------
 
     if (
         !notificacao ||
