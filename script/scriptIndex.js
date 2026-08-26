@@ -270,7 +270,7 @@ function sincronizarDestaques() {
              */
 
             const id =
-                indice + 1;
+                indice + 6; //m
 
 
             const produto =
