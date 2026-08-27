@@ -256,7 +256,7 @@ function montarProdutos() {
             document.createElement("label");
 
         labelCor.textContent =
-            "Cor";
+            "Cor da camisa";
 
 
         const selectCor =
